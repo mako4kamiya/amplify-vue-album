@@ -1,6 +1,9 @@
 <template>
   <div v-if="isSignedIn">
     <amplify-greetings></amplify-greetings>
+    <router-link custom v-slot="{ navigate }" :to="{ name: 'AlbumIndex' }">
+      <button @click="navigate">TOP</button>
+    </router-link>
   </div>
   <router-view />
 </template>
