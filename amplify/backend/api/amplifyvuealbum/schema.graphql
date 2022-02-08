@@ -14,6 +14,7 @@ type Photo
   {
   id: ID!
   name: String!
+  s3key: String!
   # albumID: ID!
   albumID: ID! @index(name: "byAlbum", sortKeyFields: ["id"])
   album: Album @belongsTo(fields: ["albumID"])
